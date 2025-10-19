@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> EU E VOCÊ!!</title>
+    <link rel="stylesheet" href="estyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  
+</head>
+
+<body>
+    <header class="cabecalho">
+        <div class="Logo">
+            <img src="img/Netflix_2015_logo.svg.png" alt="" width="50px">
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="Index.html">Início</a></li>
+                <li><a href="musica.html">Musica</a></li>
+                <li><a href="series.html">Séries</a></li>
+            </ul>
+
+        </nav>
+
+    </header>
+    <section class="banner">
+        <div class="conteudo">
+            <p class="titulo">Jônatas e Kamilly</p>
+            <p class="detalhes">
+                <span>DESDE 2024 JUNTOS</span>
+                <span class="stars">
+                    <i class="fa-solid fa-star" style="color: #ff0000;"></i>
+                    <i class="fa-solid fa-star" style="color: #ff0000;"></i>
+                    <i class="fa-solid fa-star" style="color: #ff0000;"></i>
+                    <i class="fa-solid fa-star" style="color: #ff0000;"></i>
+                    <i class="fa-solid fa-star" style="color: #ff0000;"></i>
+                </span>
+            </p>
+            <p class="descricao">
+                   Eu nem sei por onde começar...<br>
+    Às vezes me pergunto por que a vida decidiu me presentear com você — e de um jeito tão inesperado, tão intenso, tão nosso.<br>
+    Em tão pouco tempo, você se tornou a minha pessoa favorita, o meu refúgio, o meu sorriso diário.<br><br>
+
+    Lembro como se fosse hoje do primeiro dia em que te vi, apresentando aquele trabalho da Juliana no final do nosso primeiro ano.<br>
+    Você estava tão tímida, mas mesmo assim lá, firme, fazendo o que tinha que ser feito.<br>
+    Foi nesse instante que algo em mim mudou — e eu percebi que tinha acabado de encontrar alguém diferente de tudo que eu já conheci.<br><br>
+
+    Você foi — e ainda é — a única garota que conseguiu bagunçar meus pensamentos e acalmar minha alma ao mesmo tempo.<br>
+    A morena que eu sempre sonhei em ter por perto, e com quem eu sonho construir uma vida, uma história, uma família.<br><br>
+
+    Falar de você é fácil… porque tudo em você é lindo.<br>
+    Mas, ao mesmo tempo, é impossível traduzir em palavras o que você significa pra mim.<br>
+    Nenhuma frase parece suficiente pra descrever o quanto você é especial — o quanto eu te amo, te admiro e me sinto sortudo por te ter na minha vida.😍♥♥
+            </p>
+            <div class="botoes">
+                <button id="continuar">
+                    <i class="fa-solid fa-play"></i> Continuar</button>
+                <button id="favorito">
+                    <i class="fa-solid fa-star"></i> Favorito</button>
+            </div>
+        </div>
+    </section>
+    <section class="momentos">
+        <h2>Nossos melhores momentos</h2>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="img1.jpg"></div>
+                <div class="swiper-slide"><img src="img2.jpg"></div>
+                <div class="swiper-slide"><img src="img3.jpg"></div>
+                <div class="swiper-slide"><img src="img4.jpg"></div>
+                <div class="swiper-slide"><img src="img5.jpg"></div>
+                <div class="swiper-slide"><img src="img6.jpg"></div>
+                <div class="swiper-slide"><img src="img7.jpg"></div>
+                <div class="swiper-slide"><img src="img8.jpg"></div>
+                <div class="swiper-slide"><img src="img9.jpg"></div>
+              
+            </div>
+
+        </div>
+    </section>
+    <footer>
+        2025 - Alex
+    </footer>
+
+    <div class="music-control">
+        <button id="btnPlayMusic">Ouvir música de fundo</button>
+        <audio id="musica" loop>
+            <source src="Áudio do WhatsApp de 2025-10-19 à(s) 16.13.32_4f36539a.dat.unknown" type="audio/mpeg" />
+        </audio>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+
+    <script>
+        window.onload = () => {
+            const swiper = new Swiper('.swiper', {
+                loop: true,
+                loopedSlides: 3,
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+                slidesPerView: 8,
+                spaceBetween: 10,
+                observe: true,
+                observeParents: true,
+                speed: 300,
+                touchRatio: 0.5,
+                threshold: 20,
+
+                breakpoints: {
+                    600: {
+                        slidesPerView: 3,
+                        spaceBetween: 15,
+                    },
+                    900: {
+                        slidesPerView: 4,
+                        spaceBetween: 40,
+                    }
+                }
+            });
+        };
+
+        const swiperEl = document.querySelector('.swiper');
+        swiperEl.addEventListener('mousedonw', () => {
+            swiper.autoplay.stop();
+        });
+        swiperEl.addEventListener('mouseup', () => {
+            swiper.autoplay.start();
+        });
+        swiperEl.addEventListener('touchstart', () => {
+            swiper.autoplay.stop();
+        });
+        swiperEl.addEventListener('touchend', () => {
+            swiper.autoplay.start();
+        });
+
+        document.getElementById("continuar").addEventListener("click", function () {
+            const icone = this.querySelector("i");
+            icone.classList.toggle("ativo");
+        });
+
+        document.getElementById("favorito").addEventListener("click", function () {
+            const icone = this.querySelector("i");
+            icone.classList.toggle("ativo");
+        });
+
+
+    </script>
+</body>
+
+</html>

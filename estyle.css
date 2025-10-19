@@ -1,0 +1,269 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'roboto', 'san-serif';
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+.cabecalho {
+  background-color: #141414;
+  padding: 1rem 1rem;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.cabecalho nav {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.cabecalho nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+
+}
+
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 40px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.banner {
+  position: relative;
+  background: url(/img/foto2.jpeg) 50% 18%;
+  padding: 30px 1rem 2rem;
+  background-size: cover;
+  height: 500px;
+}
+
+.banner::after {
+  content: '';
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.536), rgba(0, 0, 0, 0.901));
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.conteudo {
+  position: relative;
+  max-width: 100%;
+  color: white;
+  z-index: 2;
+}
+
+.titulo {
+  font-family: "Great Vibes", cursive;
+  font-size: 40px;
+  margin: 0;
+  color: white;
+}
+
+.detalhes {
+  margin: 10px, 0;
+  color: #ccc;
+}
+
+.descricao {
+  font-size: 14px;
+  line-height: 1.3;
+
+}
+
+.botoes {
+  margin-top: 20px;
+}
+
+.botoes button {
+  background: #fff;
+  color: black;
+  border: none;
+  padding: 10px 16px;
+  margin-right: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.momentos {
+  padding: 1.5rem 1rem;
+}
+
+.momentos h2 {
+  margin-bottom: 1 rem;
+  font-size: 20px;
+}
+
+.swiper {
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.swiper-slide {
+  width: auto !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.swiper-slide img {
+  display: block;
+  height: 300px;
+  width: auto;
+  object-fit: cover;
+  border-radius: 8px;
+
+
+}
+
+@media(min-width: 900px) {
+  .swiper-slide img {
+    width: 400px;
+  }
+}
+
+footer {
+  background-color: #141414;
+  padding: 1rem;
+  text-align: center;
+  font-size: 12px;
+  color: #aaa;
+}
+
+.music-control {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10;
+}
+
+.music-control button {
+  background-color: #a100e0;
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(255, 182, 193, 0.6);
+  transition: 0.2s ease;
+}
+
+
+.swiper-wrapper {
+  display: flex;
+  margin: 0 auto;
+}
+
+.swiper-slide {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+video {
+  width: 200px;
+  height: 300px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.video-text {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+.video-title {
+  margin: 0;
+  font-size: 18px;
+  color: #ffffff;
+  font-family: "Great Vibes", cursive;
+  text-align: center;
+}
+
+button i {
+  color: rgb(0, 0, 0);
+  transition: color 0.3s;
+}
+
+#favorito i.ativo {
+  color: rgb(255, 0, 0);
+}
+
+#continuar i.ativo {
+  color: red;
+}
+
+.Nyc {
+  text-align: center;
+  font-family:'roboto', san-serif ;
+  font-size: 60px;
+  margin: 15px;
+}
+
+.Nyc p {
+  font-size: clamp(16px, 2.8vw, 20px);
+  line-height: 1.6;
+  max-width: 900px;
+  margin: auto;
+}
+
+
+#flower-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none; /* Isso impede que o fundo bloqueie cliques */
+  overflow: hidden;
+  z-index: 9999; /* Faz as flores ficarem por cima, mas cuidado com sobreposição de conteúdo */
+}
+
+.fall {
+  position: absolute;
+  top: 0;
+  animation-name: fall;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+@keyframes fall {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}

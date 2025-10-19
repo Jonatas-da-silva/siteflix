@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> EU E VOCÊ!!</title>
+    <link rel="stylesheet" href="estyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+</head>
+
+<body>
+    <header class="cabecalho">
+        <div class="Logo">
+            <img src="img/Netflix_2015_logo.svg.png" alt="" width="50px">
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="Index.html">Início</a></li>
+                <li><a href="musica.html">Musica</a></li>
+                <li><a href="series.html">Séries</a></li>
+            </ul>
+
+        </nav>
+
+    </header>
+    <section class="banner">
+        <div class="conteudo">
+            <p class="titulo">Jônatas e Kamilly</p>
+            <p class="detalhes">
+                <span>DESDE 2024 JUNTOS</span>
+                <span class="stars">
+                    <i class="fa-solid fa-star" style="color: #ff0000;"></i>
+                    <i class="fa-solid fa-star" style="color: #ff0000;"></i>
+                    <i class="fa-solid fa-star" style="color: #ff0000;"></i>
+                    <i class="fa-solid fa-star" style="color: #ff0000;"></i>
+                    <i class="fa-solid fa-star" style="color: #ff0000;"></i>
+                </span>
+            </p>
+            <p class="descricao">
+                Eu trocaria tudo para estar contigo. Pegaria a lua só para te ver feliz. <br> Para te ver bem, sou capaz
+                de
+                muita coisa...<br> Só sei dizer que eu te amo — e não é pouco.<br> Eu passaria noites e noites acordado,
+                caso
+                você não conseguisse dormir.<br>
+                E vai ser sempre assim:<br>
+                Eu por você,<br>
+                Você por mim,<br>
+                E Deus por nós!<br>
+                Te amo demais, minha menininha...😍♥♥
+            </p>
+            <div class="botoes">
+                <button id="continuar"><i class="fa-solid fa-play"></i> Continuar</button>
+                <button id="favorito"><i class="fa-solid fa-star"></i> favorito</button>
+            </div>
+        </div>
+    </section>
+    
+  </div>
+</div class="container">
+<div class="momentos">
+        <div class="swiper">
+     <div class="swiper-wrapper">
+  <div class="swiper-slide">
+      <h3 class="video-title">Eu te amoo!</h3>
+      <video controls loop poster="img/foto5.jpeg" autoplay>
+        <source src="v7.mp4" type="video/mp4" >
+    </video>
+                </div>
+                <div class="swiper-slide">
+                    <h3 class="video-title">Eu te amoo!</h3>
+                    <video controls loop poster="img/foto5.jpeg" autoplay muted>
+                        <source src="v1.mp4">
+                    </video>
+                </div>
+
+                <div class="swiper-slide">
+                    <h3 class="video-title">Eu te amoo!</h3>
+                    <video controls loop poster="img/foto5.jpeg"autoplay muted>
+                        <source src="v2.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="swiper-slide">
+                    <h3 class="video-title">Eu te amoo!</h3>
+                    <video controls loop poster="img/foto5.jpeg" autoplay >
+                        <source src="v3.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="swiper-slide">
+                    <h3 class="video-title">Eu te amoo!</h3>
+                    <video controls loop poster="img/foto5.jpeg" autoplay muted>
+                        <source src="v4.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="swiper-slide">
+                    <h3 class="video-title">Eu te amoo!</h3>
+                    <video controls loop poster="img/foto5.jpeg" autoplay muted>
+                        <source src="v5.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="swiper-slide">
+                    <h3 class="video-title">Eu te amoo!</h3>
+                    <video controls poster="img/foto5.jpeg" autoplay muted>
+                        <source src="v5.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="swiper-slide">
+                    <h3 class="video-title">Eu te amoo!</h3>
+                    <video controls loop  poster="img/foto5.jpeg" autoplay muted>
+                        <source src="v6.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <footer>
+        2025 - Jônatas
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+
+    </script>
+    <script>
+        window.onload = () => {
+            const swiper = new Swiper('.swiper', {
+                loop: true,
+                loopedSlides: 3,
+                autoplay: {
+                    delay: 10000,
+                    disableOnInteraction: false,
+                },
+                slidesPerView: 3,
+                spaceBetween: 20,
+                observe: true,
+                observeParents: true,
+              speed: 300,
+                touchRatio: 0.5,
+                threshold: 20,
+
+                breakpoints: {
+                    600: {
+                        slidesPerView: 3,
+                        spaceBetween: 15,
+                    },
+                    900: {
+                        slidesPerView: 4,
+                        spaceBetween: 40,
+                    }
+                }
+            });
+        };
+        document.querySelectorAll('video').forEach(video => {
+            ['mousedown', 'mouseup', 'touchstart', 'touchend', 'click'].forEach(eventName => {
+                video.addEventListener(eventName, function (e) {
+                    e.stopPropagation();
+                });
+            });
+        });
+        //toda vez que clicar o loop vai parar, e quando eu soltar ele vai começar automaticamente
+        const swiperEl = document.querySelector('.swiper');
+        swiperEl.addEventListener('mousedown', () => {
+            swiper.autoplay.stop();
+        });
+        swiperEl.addEventListener('mouseup', () => {
+            swiper.autoplay.start();
+        });
+        swiperEl.addEventListener('touchstart', () => {
+            swiper.autoplay.stop();
+        });
+        swiperEl.addEventListener('touchend', () => {
+            swiper.autoplay.start();
+        });
+        //altera a cor das estrelas e do play para red
+        document.getElementById("continuar").addEventListener("click", function () {
+            const icone = this.querySelector("i");
+            icone.classList.toggle("ativo");
+        });
+      
+        document.getElementById("favorito").addEventListener("click", function () {
+            const icone = this.querySelector("i");
+            icone.classList.toggle("ativo");
+        });
+       document.querySelectorAll('video').forEach(video => {
+    // Parar o loop se o vídeo começar a tocar
+    video.addEventListener('play', () => {
+        video.loop = false;
+    });
+
+    // Parar o loop se o usuário clicar no vídeo
+    video.addEventListener('click', () => {
+        video.loop = false;
+    });
+});
+
+    </script>
+</body>
+
+</html>
